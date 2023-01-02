@@ -2,12 +2,12 @@
 
 ## Set-up
 
-You may need to alter your IDE (VS Code) to support HTML and CSS. Please check the documentation for your IDE.
+You will need to a Python environment. You can install all the dependencies using the [requirements.txt](/requirements.txt) file:, e.g. `pip3 install -r requirements.txt`
+
+To run the week 1 solutions you may need to alter your IDE (VS Code) to support HTML and CSS. Please check the documentation for your IDE.
 
 - [HTML programming in VS Code](https://code.visualstudio.com/docs/languages/html)
 - [HTML support in PyCharm](https://www.jetbrains.com/help/pycharm/editing-html-files.html)
-
-You will need to a Python environment for the final activity only e.g create and activate a venv. Install Dash and pandas in the environment, e.g. `pip3 install dash pandas`
 
 ## Activities
 
