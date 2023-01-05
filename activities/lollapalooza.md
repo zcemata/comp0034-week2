@@ -72,8 +72,7 @@ Stop and re-run the Dash app. You should see the chart displayed.
 
 There are the 4 ways you can style and customize figures made with Plotly Express:
 
-1. Control common parameters like width & height, titles, labeling and colors using built-in Plotly Express function
-   arguments
+1. Control common parameters like width & height, titles, labeling and colors using built-in Plotly Express function arguments.
 
 Go to [this page](https://plotly.com/python/styling-plotly-express/#builtin-plotly-express-styling-arguments) and use
 the guidance. Then modify the fig code to add `title="Purchases by place"` to the chart.
@@ -82,8 +81,7 @@ the guidance. Then modify the fig code to add `title="Purchases by place"` to th
 fig_bar = px.bar(purchase_df, x="spend", y="date", color="place", title="Purchases by place")
 ```
 
-2. Updating the figure attributes
-   using [update methods or by directly setting attributes](https://plotly.com/python/creating-and-updating-figures/)
+2. Updating the figure attributes using [update methods or by directly setting attributes](https://plotly.com/python/creating-and-updating-figures/)
 
 Read [the documentation here](https://plotly.com/python/creating-and-updating-figures/#adding-traces) - scroll a little
 to the plotly express example.
@@ -187,8 +185,14 @@ mapbox_token = ""  # Add your mapbox token here
 
 df = pd.read_csv("../data/stages.csv")
 
-trace = go.Scattermapbox(lat=df["latitude"], lon=df["longitude"], text=df["stage"], marker=go.Marker(size=10),
-                         mode="markers+text", textposition="top left")
+trace = go.Scattermapbox(
+   lat=df["latitude"], 
+   lon=df["longitude"], 
+   text=df["stage"],
+   marker={'size': 12},
+   mode="markers+text",
+   textposition="top left"
+   )
 
 data = [trace]
 
@@ -214,14 +218,22 @@ Add the code to create the figure using the data from the data file to `dash_app
 
 ```python
 file_path_concert = Path(__file__).parent.joinpath('data', 'concerts_I_attended.csv')
+
 df_table = pd.read_csv(file_path_concert)
+
 df_table = prepare_data.prepare_concert_data(df_table)
 
-trace_table = go.Table(header=dict(values=["Concert", "Date", "Correct?"], fill=dict(color=("rgb(82,187,47)"))),
-                       cells=dict(values=[df_table.concert, df_table.date, df_table.correct],
-                                  font=dict(color=([df_table.color]))))
+trace_table = go.Table(
+   header=dict(
+      values=["Concert", "Date", "Correct?"], 
+      fill=dict(color=("rgb(82,187,47)"))),
+   cells=dict(
+      values=[df_table.concert, df_table.date, df_table.correct],
+      font=dict(color=([df_table.color])))
+   )
 
 data = [trace_table]
+
 fig_table = go.Figure(data=data)
 ```
 
