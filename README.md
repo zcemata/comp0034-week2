@@ -13,6 +13,11 @@ To run the week 1 solutions you may need to alter your IDE (VS Code) to support 
 
 The activities are accessed from [activities/activities.md](/activities/activities.md)
 
+There are optional activitities for more practice:
+
+- [activities/lollapalooza.md](/activities/lollapalooza.md) - Guided activity to create charts in a dashboard
+- [activities/covid.md](/activities/covid.md) - This activity is not scripted so will be more challenging
+
 ## Week 1 solutions
 
 Possible solutions to the week 1 activity are in [week1_solutions](/week1_solutions)
